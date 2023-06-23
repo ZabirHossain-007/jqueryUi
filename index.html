@@ -1,0 +1,1289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- meta tag starts -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- seo optimizer code will goes here -->
+
+    <!-- meta tag ends -->
+    <title>JQuery UI</title>
+
+    <link rel="shortcut icon" href="images/jqueryui.jpeg" type="image/x-icon">
+    <!-- css link will goes here -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css?fbclid=IwAR0PPecJiDMhuhikY_N8mJmSDRwqIZgrksLHUHIh5sg0r6GgrvT7Lz0_O1M">
+    <link rel="stylesheet" href="css/jqueryui/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- This link will use for responsive purpose -->
+    <link rel="stylesheet" href="css/media.css">
+</head>
+
+<body>
+    <section class="jqueryUi">
+
+        <div class="header">
+            <h1 class="headerText">JQuery UI Example</h1>
+        </div>
+        <!-- draggable content starts -->
+        <h3 class="text-center text-black text-bg-warning coustomHeading mt-3">Draggable Content</h3>
+        <div class="container">
+            <div id="draggable" class="ui-widget-content">
+                <p>Drag me around</p>
+            </div>
+        </div>
+        <hr>
+        <!-- draggable content ends -->
+
+        <!-- Constrain Movement starts -->
+
+        <div class="container cContainer ">
+            <h3 class="constrainHeading">Constrain movement along an axis:</h3>
+
+            <div id="draggable1" class="draggable draggableC ui-widget-content">
+                <p class="dVer">I can be dragged only vertically</p>
+            </div>
+
+            <div id="draggable2" class="draggable draggableC ui-widget-content">
+                <p class="dHor">I can be dragged only horizontally</p>
+            </div>
+        </div>
+
+
+        <div class="container cContainer ">
+
+            <h3>Or to within another DOM element:</h3>
+            <div id="containment-wrapper">
+                <div id="draggable3" class="draggable draggableC ui-widget-content">
+                    <p>I&apos;m contained within the box</p>
+                </div>
+
+                <div class="draggable draggableC ui-widget-content">
+                    <p id="draggable4" class="ui-widget-header">I&apos;m contained within my parent</p>
+                </div>
+            </div>
+            <!-- Constrain Movement ends -->
+
+            <!-- cursor style starts -->
+            <div class="container">
+                <div class="row">
+                    <div id="draggable5" class="draggableC2 ui-widget-content">
+                        <p>I will always stick to the center (relative to the mouse)</p>
+                    </div>
+
+                    <div id="draggable6" class=" draggableC2 ui-widget-content">
+                        <p>My cursor is at left -5 and top -5</p>
+                    </div>
+
+                    <div id="draggable7" class="draggableC2 ui-widget-content">
+                        <p>My cursor position is only controlled for the &apos;bottom&apos; value</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- cursor style ends -->
+
+            <!-- events starts -->
+
+            <div class="container ">
+                <h2> Allow elements to be moved using the mouse.</h2>
+                <div id="draggable8" class="ui-widget ui-widget-content">
+
+                    <p>Drag me to trigger the chain of events.</p>
+
+                    <ul class="ui-helper-reset">
+                        <li id="event-start" class="ui-state-default ui-corner-all"><span
+                                class="ui-icon ui-icon-play"></span>&quot;start&quot; invoked <span
+                                class="count">0</span>x</li>
+                        <li id="event-drag" class="ui-state-default ui-corner-all"><span
+                                class="ui-icon ui-icon-arrow-4"></span>&quot;drag&quot; invoked <span
+                                class="count">0</span>x</li>
+                        <li id="event-stop" class="ui-state-default ui-corner-all"><span
+                                class="ui-icon ui-icon-stop"></span>&quot;stop&quot; invoked <span
+                                class="count">0</span>x</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- events ends -->
+
+            <!-- handles start -->
+            <div class="container">
+                <div class="row">
+                    <h2> Allow elements to be moved using the mouse.</h2>
+                    <div id="draggable9" class="ui-widget-content">
+                        <p class="ui-widget-header">I can be dragged only by this handle</p>
+                    </div>
+
+                    <div id="draggable10" class="ui-widget-content">
+                        <p>You can drag me around&#x2026;</p>
+                        <p class="ui-widget-header">&#x2026;but you can&apos;t drag me by this handle.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- handle ends -->
+
+            <div class="row marginTop">
+                <h2>Draggable + Sortable</h2>
+                <ul>
+                    <li id="draggable11" class="ui-state-highlight">Drag me down</li>
+                </ul>
+
+                <ul id="sortable">
+                    <li class="ui-state-default">Item 1</li>
+                    <li class="ui-state-default">Item 2</li>
+                    <li class="ui-state-default">Item 3</li>
+                    <li class="ui-state-default">Item 4</li>
+                    <li class="ui-state-default">Item 5</li>
+                </ul>
+
+
+            </div>
+
+            <!-- Revert position starts -->
+            <div class="row marginTop">
+                <h2>Revert position</h2>
+                <div id="draggable12" class="ui-widget-content">
+                    <p>Revert the original</p>
+                </div>
+
+                <div id="draggable13" class="ui-widget-content">
+                    <p>Revert the helper</p>
+                </div>
+            </div>
+            <!-- revert position ends -->
+
+            <!-- visual feedback starts -->
+            <div class="container marginTop">
+                <div class="row">
+                    <h2>visual feedback</h2>
+                    <h3 class="docs">With helpers:</h3>
+
+                    <div id="draggable14" class="ui-widget-content">
+                        <p>Original</p>
+                    </div>
+
+                    <div id="draggable15" class="ui-widget-content">
+                        <p>Semi-transparent clone</p>
+                    </div>
+
+                    <div id="draggable16" class="ui-widget-content">
+                        <p>Custom helper (in combination with cursorAt)</p>
+                    </div>
+
+                    <h3 class="docs">Stacked:</h3>
+                    <div id="set">
+                        <div class="ui-widget-content">
+                            <p>We are draggables..</p>
+                        </div>
+
+                        <div class="ui-widget-content">
+                            <p>..whose z-indexes are controlled automatically..</p>
+                        </div>
+
+                        <div class="ui-widget-content">
+                            <p class="para"> ..with the stack option.</p>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!-- visual feedback ends -->
+
+    </section>
+
+
+    <section class="jqueryUi2 cContainer">
+        <h3 class="text-center text-black text-bg-warning coustomHeading mt-3">Droppable Content</h3>
+        <!-- droppable default starts -->
+        <div class="container">
+            <div class="row marginTop">
+                <div id="draggableA" class="ui-widget-content">
+                    <p class="drag">Drag me to my target</p>
+                </div>
+
+                <div id="droppableA" class="ui-widget-header">
+                    <p>Drop here</p>
+                </div>
+            </div>
+
+            <!-- Droppable accept starts -->
+            <div class="row">
+                <h2>Droppable Accept</h2>
+                <div id="draggable-nonvalid" class="ui-widget-content">
+                    <p>I&apos;m draggable but can&apos;t be dropped</p>
+                </div>
+
+                <div id="draggableB" class="ui-widget-content">
+                    <p>Drag me to my target</p>
+                </div>
+
+                <div id="droppableB" class="ui-widget-header">
+                    <p>accept: &apos;#draggable&apos;</p>
+                </div>
+
+            </div>
+
+            <!-- Droppable accept ends -->
+
+            <!-- droppable prevent propagation starts -->
+            <div class="row">
+                <h2>Droppable prvent propagation</h2>
+                <div id="draggableC" class="ui-widget-content">
+                    <p>Drag me to my target</p>
+                </div>
+
+                <div id="droppableC" class="ui-widget-header">
+                    <p>Outer droppable</p>
+                    <div id="droppable-inner" class="ui-widget-header">
+                        <p>Inner droppable (not greedy)</p>
+                    </div>
+                </div>
+
+                <div id="droppableC2" class="ui-widget-header">
+                    <p>Outer droppable</p>
+                    <div id="droppable2-inner" class="ui-widget-header">
+                        <p>Inner droppable (greedy)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- droppablel prevent propagation ends -->
+
+            <!-- revert draggable position starts -->
+            <div class="row">
+                <h2> revert draggable position</h2>
+                <div id="draggableD" class="ui-widget-content">
+                    <p>I revert when I&apos;m dropped</p>
+                </div>
+
+                <div id="draggableD2" class="ui-widget-content">
+                    <p>I revert when I&apos;m not dropped</p>
+                </div>
+
+                <div id="droppableD" class="ui-widget-header">
+                    <p>Drop me here</p>
+                </div>
+
+            </div>
+            <!-- revert draggable position ends -->
+
+            <!-- simple photo manager starts -->
+            <div class="row">
+                <h2>Simple Photo Manager</h2>
+
+                <div class="ui-widget ui-helper-clearfix">
+
+                    <ul id="gallery" class="gallery ui-helper-reset ui-helper-clearfix">
+                        <li class="ui-widget-content ui-corner-tr">
+                            <h5 class="ui-widget-header">High Tatras</h5>
+                            <img src="images/high_tatras_min.jpg" alt="The peaks of High Tatras" width="96" height="72">
+                            <a href="images/high_tatras.jpg" title="View larger image"
+                                class="ui-icon ui-icon-zoomin">View larger</a>
+                            <a href="link/to/trash/script/when/we/have/js/off" title="Delete this image"
+                                class="ui-icon ui-icon-trash">Delete image</a>
+                        </li>
+                        <li class="ui-widget-content ui-corner-tr">
+                            <h5 class="ui-widget-header">High Tatras 2</h5>
+                            <img src="images/high_tatras2_min.jpg" alt="The chalet at the Green mountain lake"
+                                width="96" height="72">
+                            <a href="images/high_tatras2.jpg" title="View larger image"
+                                class="ui-icon ui-icon-zoomin">View larger</a>
+                            <a href="link/to/trash/script/when/we/have/js/off" title="Delete this image"
+                                class="ui-icon ui-icon-trash">Delete image</a>
+                        </li>
+                        <li class="ui-widget-content ui-corner-tr">
+                            <h5 class="ui-widget-header">High Tatras 3</h5>
+                            <img src="images/high_tatras3_min.jpg" alt="Planning the ascent" width="96" height="72">
+                            <a href="images/high_tatras3.jpg" title="View larger image"
+                                class="ui-icon ui-icon-zoomin">View larger</a>
+                            <a href="link/to/trash/script/when/we/have/js/off" title="Delete this image"
+                                class="ui-icon ui-icon-trash">Delete image</a>
+                        </li>
+                        <li class="ui-widget-content ui-corner-tr">
+                            <h5 class="ui-widget-header">High Tatras 4</h5>
+                            <img src="images/high_tatras4_min.jpg" alt="On top of Kozi kopka" width="96" height="72">
+                            <a href="images/high_tatras4.jpg" title="View larger image"
+                                class="ui-icon ui-icon-zoomin">View larger</a>
+                            <a href="link/to/trash/script/when/we/have/js/off" title="Delete this image"
+                                class="ui-icon ui-icon-trash">Delete image</a>
+                        </li>
+                    </ul>
+
+                    <div id="trash" class="ui-widget-content ui-state-default">
+                        <h4 class="ui-widget-header"><span class="ui-icon ui-icon-trash">Trash</span> Trash</h4>
+                    </div>
+
+                </div>
+            </div>
+            <!-- simple photo manager ends -->
+
+            <!-- visual feedback starts -->
+            <div class="row">
+                <h3>Feedback on hover:</h3>
+
+                <div id="draggableE" class="ui-widget-content">
+                    <p>Drag me to my target</p>
+                </div>
+
+                <div id="droppableE" class="ui-widget-header">
+                    <p>Drop here</p>
+                </div>
+
+                <h3 class="feedback">Feedback on activating draggable:</h3>
+
+                <div id="draggableE2" class="ui-widget-content">
+                    <p>Drag me to my target</p>
+                </div>
+
+                <div id="droppableE2" class="ui-widget-header">
+                    <p>Drop here</p>
+                </div>
+            </div>
+            <!-- visual feedback ends -->
+
+
+
+        </div>
+
+        <!-- droppable default ends -->
+
+        <!-- Resizable starts -->
+        <div class="container">
+            <h3 class="text-center text-black text-bg-warning coustomHeading mt-3">Resizable Content</h3>
+            <!-- Resizable default starts -->
+            <div class="row">
+                <div id="resizable" class="ui-widget-content">
+                    <h3 class="ui-widget-header">Resizable</h3>
+                </div>
+
+
+            </div>
+            <!-- Resizable defaults ends -->
+
+            <!-- resizable animate starts -->
+            <div class="row mt-5">
+                <h2>Resizable animate:</h2>
+                <div id="resizableA" class="ui-widget-content">
+                    <h3 class="ui-widget-header">Animate</h3>
+                </div>
+            </div>
+            <!-- resizable animate ends -->
+
+            <!-- constrain resize area starts -->
+            <div class="row mt-5">
+                <h2>constrain resize area</h2>
+                <div id="container" class="ui-widget-content">
+                    <h3 class="ui-widget-header">Containment</h3>
+                    <div id="resizableB" class="ui-state-active">
+                        <h3 class="ui-widget-header">Resizable</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- constrain resize area ends -->
+
+            <!-- resize helper starts -->
+            <div class="row mt-5">
+                <h2>Resize Helper</h2>
+                <div id="resizableC" class="ui-widget-content">
+                    <h3 class="ui-widget-header">Helper</h3>
+                </div>
+            </div>
+            <!-- resize helper ends -->
+
+            <!-- maximum or minimum resize starts -->
+            <div class="row mt-5">
+                <h2>maximum/minimum resize</h2>
+                <div id="resizableD" class="ui-widget-content">
+                    <h3 class="ui-widget-header">Resize larger / smaller</h3>
+                </div>
+
+            </div>
+            <!-- maximum or minimum resize ends -->
+
+            <!-- preserve aspect ratio starts -->
+            <div class="row mt-5">
+                <h2>preserve aspect ratio</h2>
+                <div id="resizableE" class="ui-widget-content">
+                    <h3 class="ui-widget-header">Preserve aspect ratio</h3>
+                </div>
+            </div>
+            <!-- preserve aspect ratio ends -->
+
+            <!-- snap to grid starts -->
+            <div class="row mt-5">
+                <h2>Snap to grid</h2>
+                <div id="resizableF" class="ui-widget-content">
+                    <h3 class="ui-widget-header">Grid</h3>
+                </div>
+            </div>
+            <!-- snap to grid ends -->
+
+            <!-- synchronous resize starts -->
+            <div class="row mt-5">
+                <h2>synchronous resize</h2>
+                <div id="resizableG" class="ui-widget-header">
+                    <h3 class="ui-state-active">Resize</h3>
+                </div>
+
+                <div id="also" class="ui-widget-content">
+                    <h3 class="ui-widget-header">will also resize</h3>
+                </div>
+            </div>
+            <!-- synchronous resize ends -->
+
+            <!-- visual feedback starts -->
+            <div class="row mt-5">
+                <h2>visual feedback</h2>
+                <div id="resizableH" class="ui-widget-content">
+                    <h3 class="ui-widget-header">Ghost</h3>
+                </div>
+
+            </div>
+            <!-- visual feedback ends -->
+        </div>
+        <!-- Resizable ends -->
+
+        <!-- selec starts -->
+        <div class="container marginTop">
+            <h3 class="text-center text-black text-bg-warning coustomHeading mt-3">Selectable Content</h3>
+
+            <!-- select default starts -->
+            <div class="row mt-5">
+                <ol id="selectable">
+                    <li class="ui-widget-content">Item 1</li>
+                    <li class="ui-widget-content">Item 2</li>
+                    <li class="ui-widget-content">Item 3</li>
+                    <li class="ui-widget-content">Item 4</li>
+                    <li class="ui-widget-content">Item 5</li>
+                    <li class="ui-widget-content">Item 6</li>
+                    <li class="ui-widget-content">Item 7</li>
+                </ol>
+
+            </div>
+            <!-- select default ends -->
+
+            <!-- select display as grid starts -->
+            <div class="row mt-5">
+                <h2>display as grid</h2>
+                <ol id="selectableA">
+                    <li class="ui-state-default">1</li>
+                    <li class="ui-state-default">2</li>
+                    <li class="ui-state-default">3</li>
+                    <li class="ui-state-default">4</li>
+                    <li class="ui-state-default">5</li>
+                    <li class="ui-state-default">6</li>
+                    <li class="ui-state-default">7</li>
+                    <li class="ui-state-default">8</li>
+                    <li class="ui-state-default">9</li>
+                    <li class="ui-state-default">10</li>
+                    <li class="ui-state-default">11</li>
+                    <li class="ui-state-default">12</li>
+                </ol>
+            </div>
+
+            <!-- select display as grid ends -->
+
+            <!-- serialize select starts -->
+            <div class="row mt-5">
+                <h2>Serialize Select</h2>
+                <p id="feedbackB">
+                    <span>You&apos;ve selected:</span> <span id="select-result">none</span>.
+                </p>
+                <ol id="selectableB">
+                    <li class="ui-widget-content">Item 1</li>
+                    <li class="ui-widget-content">Item 2</li>
+                    <li class="ui-widget-content">Item 3</li>
+                    <li class="ui-widget-content">Item 4</li>
+                    <li class="ui-widget-content">Item 5</li>
+                    <li class="ui-widget-content">Item 6</li>
+                </ol>
+
+            </div>
+            <!-- serialize select ends -->
+
+
+        </div>
+        <!-- select ends -->
+
+        <!-- sortable section starts -->
+        <div class="container mt-5">
+            <h3 class="text-center text-black text-bg-warning coustomHeading mt-3">Sortable Content</h3>
+            <!-- sortable default -->
+            <div class="row mt-5">
+                <ul id="sortableA">
+                    <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 1</li>
+                    <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 2</li>
+                    <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 3</li>
+                    <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 4</li>
+                    <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 5</li>
+                    <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 6</li>
+                    <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 7</li>
+                </ul>
+
+            </div>
+            <!-- sortable default ends-->
+
+            <!-- Connect list starts -->
+            <div class="row mt-5">
+                <h2>Connect List</h2>
+                <ul id="sortable1" class="connectedSortable">
+                    <li class="ui-state-default">Item 1</li>
+                    <li class="ui-state-default">Item 2</li>
+                    <li class="ui-state-default">Item 3</li>
+                    <li class="ui-state-default">Item 4</li>
+                    <li class="ui-state-default">Item 5</li>
+                </ul>
+
+                <ul id="sortable2" class="connectedSortable">
+                    <li class="ui-state-highlight">Item 1</li>
+                    <li class="ui-state-highlight">Item 2</li>
+                    <li class="ui-state-highlight">Item 3</li>
+                    <li class="ui-state-highlight">Item 4</li>
+                    <li class="ui-state-highlight">Item 5</li>
+                </ul>
+            </div>
+            <!-- Connect list ends -->
+
+            <!-- Display as grid starts -->
+            <div class="row mt-5">
+                <h2>Display as Grid</h2>
+                <ul id="sortableB">
+                    <li class="ui-state-default">1</li>
+                    <li class="ui-state-default">2</li>
+                    <li class="ui-state-default">3</li>
+                    <li class="ui-state-default">4</li>
+                    <li class="ui-state-default">5</li>
+                    <li class="ui-state-default">6</li>
+                    <li class="ui-state-default">7</li>
+                    <li class="ui-state-default">8</li>
+                    <li class="ui-state-default">9</li>
+                    <li class="ui-state-default">10</li>
+                    <li class="ui-state-default">11</li>
+                    <li class="ui-state-default">12</li>
+                </ul>
+            </div>
+            <!-- Display as grid ends -->
+
+            <!-- Drop place holder starts -->
+            <div class="row mt-5">
+                <h2>Drop placeholder</h2>
+                <ul id="sortableC">
+                    <li class="ui-state-default">Item 1</li>
+                    <li class="ui-state-default">Item 2</li>
+                    <li class="ui-state-default">Item 3</li>
+                    <li class="ui-state-default">Item 4</li>
+                    <li class="ui-state-default">Item 5</li>
+                    <li class="ui-state-default">Item 6</li>
+                    <li class="ui-state-default">Item 7</li>
+                </ul>
+            </div>
+
+            <!-- Drop place holder ends -->
+
+            <!-- Handle empty list starts -->
+            <div class="row mt-5">
+                <h2>Handle empty list</h2>
+                <ul id="sortableD1" class="droptrue">
+                    <li class="ui-state-default">Can be dropped..</li>
+                    <li class="ui-state-default">..on an empty list</li>
+                    <li class="ui-state-default">Item 3</li>
+                    <li class="ui-state-default">Item 4</li>
+                    <li class="ui-state-default">Item 5</li>
+                </ul>
+
+                <ul id="sortableD2" class="dropfalse">
+                    <li class="ui-state-highlight">Cannot be dropped..</li>
+                    <li class="ui-state-highlight">..on an empty list</li>
+                    <li class="ui-state-highlight">Item 3</li>
+                    <li class="ui-state-highlight">Item 4</li>
+                    <li class="ui-state-highlight">Item 5</li>
+                </ul>
+
+                <ul id="sortableD3" class="droptrue">
+                </ul>
+
+                <br style="clear:both">
+            </div>
+            <!-- Handle empty list ends -->
+
+
+            <!-- include or exclude item starts -->
+            <div class="row mt-5">
+                <h2>Include or exclude items</h2>
+                <h3 class="docs">Specify which items are sortable:</h3>
+
+                <ul id="sortableE1">
+                    <li class="ui-state-default">Item 1</li>
+                    <li class="ui-state-default ui-state-disabled">(I&apos;m not sortable or a drop target)</li>
+                    <li class="ui-state-default ui-state-disabled">(I&apos;m not sortable or a drop target)</li>
+                    <li class="ui-state-default">Item 4</li>
+                </ul>
+
+                <h3 class="docs">Cancel sorting (but keep as drop targets):</h3>
+
+                <ul id="sortableE2">
+                    <li class="ui-state-default">Item 1</li>
+                    <li class="ui-state-default ui-state-disabled">(I&apos;m not sortable)</li>
+                    <li class="ui-state-default ui-state-disabled">(I&apos;m not sortable)</li>
+                    <li class="ui-state-default">Item 4</li>
+                </ul>
+
+            </div>
+            <!-- include or exclude item ends -->
+
+            <!-- portlets starts -->
+            <div class="row bodyP mt-5">
+                <h2>Portlets:</h2>
+                <div class="column">
+
+                    <div class="portlet">
+                        <div class="portlet-header">Feeds</div>
+                        <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+                    </div>
+
+                    <div class="portlet">
+                        <div class="portlet-header">News</div>
+                        <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+                    </div>
+
+                </div>
+
+                <div class="column">
+
+                    <div class="portlet">
+                        <div class="portlet-header">Shopping</div>
+                        <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+                    </div>
+
+                </div>
+
+                <div class="column">
+
+                    <div class="portlet">
+                        <div class="portlet-header">Links</div>
+                        <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+                    </div>
+
+                    <div class="portlet">
+                        <div class="portlet-header">Images</div>
+                        <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- portlets ends -->
+        </div>
+        <!-- sortable section starts -->
+
+
+    </section>
+
+    <section class="widget cContainer">
+        <!-- widget starts -->
+        <div class="container">
+            <h3 class="text-center text-black text-bg-warning coustomHeading mt-3">Widget</h3>
+
+            <!-- accordion starts -->
+            <div class="row mt-5">
+                <h2>Accordion default</h2>
+                <div id="accordion">
+                    <h3>Section 1</h3>
+                    <div>
+                        <p>
+                            Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+                            ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+                            amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+                            odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+                        </p>
+                    </div>
+                    <h3>Section 2</h3>
+                    <div>
+                        <p>
+                            Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+                            purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+                            velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+                            suscipit faucibus urna.
+                        </p>
+                    </div>
+                    <h3>Section 3</h3>
+                    <div>
+                        <p>
+                            Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
+                            Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
+                            ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
+                            lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
+                        </p>
+                        <ul>
+                            <li>List item one</li>
+                            <li>List item two</li>
+                            <li>List item three</li>
+                        </ul>
+                    </div>
+                    <h3>Section 4</h3>
+                    <div>
+                        <p>
+                            Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+                            et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+                            faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+                            mauris vel est.
+                        </p>
+                        <p>
+                            Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+                            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+                            inceptos himenaeos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- accordion ends -->
+
+            <!-- Collapse accordion starts -->
+            <div class="row mt-5">
+                <h2>Collapse Accordion</h2>
+                <div id="accordionA">
+                    <h3>Section 1</h3>
+                    <div>
+                        <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus
+                            nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit
+                            eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante
+                            scelerisque vulputate.</p>
+                    </div>
+                    <h3>Section 2</h3>
+                    <div>
+                        <p>Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet purus. Vivamus
+                            hendrerit, dolor at aliquet laoreet, mauris turpis porttitor velit, faucibus interdum tellus
+                            libero ac justo. Vivamus non quam. In suscipit faucibus urna. </p>
+                    </div>
+                    <h3>Section 3</h3>
+                    <div>
+                        <p>Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis. Phasellus
+                            pellentesque purus in massa. Aenean in pede. Phasellus ac libero ac tellus pellentesque
+                            semper. Sed ac felis. Sed commodo, magna quis lacinia ornare, quam ante aliquam nisi, eu
+                            iaculis leo purus venenatis dui. </p>
+                        <ul>
+                            <li>List item one</li>
+                            <li>List item two</li>
+                            <li>List item three</li>
+                        </ul>
+                    </div>
+                    <h3>Section 4</h3>
+                    <div>
+                        <p>Cras dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+                            turpis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+                            cubilia Curae; Aenean lacinia mauris vel est. </p>
+                        <p>Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus. Class aptent
+                            taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Collapse accordion ends -->
+
+            <!-- customize icons starts -->
+            <div class="row mt-5">
+                <h2>Customize Icons</h2>
+                <div id="accordionB">
+                    <h3>Section 1</h3>
+                    <div>
+                        <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus
+                            nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit
+                            eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante
+                            scelerisque vulputate.</p>
+                    </div>
+                    <h3>Section 2</h3>
+                    <div>
+                        <p>Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet purus. Vivamus
+                            hendrerit, dolor at aliquet laoreet, mauris turpis porttitor velit, faucibus interdum tellus
+                            libero ac justo. Vivamus non quam. In suscipit faucibus urna. </p>
+                    </div>
+                    <h3>Section 3</h3>
+                    <div>
+                        <p>Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis. Phasellus
+                            pellentesque purus in massa. Aenean in pede. Phasellus ac libero ac tellus pellentesque
+                            semper. Sed ac felis. Sed commodo, magna quis lacinia ornare, quam ante aliquam nisi, eu
+                            iaculis leo purus venenatis dui. </p>
+                        <ul>
+                            <li>List item one</li>
+                            <li>List item two</li>
+                            <li>List item three</li>
+                        </ul>
+                    </div>
+                    <h3>Section 4</h3>
+                    <div>
+                        <p>Cras dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+                            turpis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+                            cubilia Curae; Aenean lacinia mauris vel est. </p>
+                        <p>Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus. Class aptent
+                            taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+                    </div>
+                </div>
+
+                <button id="toggle">Toggle icons</button>
+            </div>
+            <!-- customize icons ends -->
+
+            <!-- Fill space starts -->
+            <div class="row mt-5">
+                <h2>Fill Space</h2>
+                <h3 class="docs">Resize the outer container:</h3>
+
+                <div id="accordion-resizer" class="ui-widget-content">
+                    <div id="accordionC">
+                        <h3>Section 1</h3>
+                        <div>
+                            <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque.
+                                Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh.
+                                Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum
+                                a velit eu ante scelerisque vulputate.</p>
+                        </div>
+                        <h3>Section 2</h3>
+                        <div>
+                            <p>Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet purus. Vivamus
+                                hendrerit, dolor at aliquet laoreet, mauris turpis porttitor velit, faucibus interdum
+                                tellus libero ac justo. Vivamus non quam. In suscipit faucibus urna. </p>
+                        </div>
+                        <h3>Section 3</h3>
+                        <div>
+                            <p>Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis. Phasellus
+                                pellentesque purus in massa. Aenean in pede. Phasellus ac libero ac tellus pellentesque
+                                semper. Sed ac felis. Sed commodo, magna quis lacinia ornare, quam ante aliquam nisi, eu
+                                iaculis leo purus venenatis dui. </p>
+                            <ul>
+                                <li>List item one</li>
+                                <li>List item two</li>
+                                <li>List item three</li>
+                            </ul>
+                        </div>
+                        <h3>Section 4</h3>
+                        <div>
+                            <p>Cras dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+                                ac turpis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+                                posuere cubilia Curae; Aenean lacinia mauris vel est. </p>
+                            <p>Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus. Class aptent
+                                taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Fill space ends -->
+
+            <!-- No auto height starts -->
+            <div class="row mt-5">
+                <h2>No Auto Height</h2>
+                <div id="accordionD">
+                    <h3>Section 1</h3>
+                    <div>
+                        <p>Mauris mauris ante, blandit et, ultrices a, susceros. Nam mi. Proin viverra leo ut odio.
+                            Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.</p>
+                    </div>
+                    <h3>Section 2</h3>
+                    <div>
+                        <p>Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet purus. Vivamus
+                            hendrerit, dolor at aliquet laoreet, mauris turpis porttitor velit, faucibus interdum tellus
+                            libero ac justo. Vivamus non quam. In suscipit faucibus urna. </p>
+                    </div>
+                    <h3>Section 3</h3>
+                    <div>
+                        <p>Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis. Phasellus
+                            pellentesque purus in massa. Aenean in pede. Phasellus ac libero ac tellus pellentesque
+                            semper. Sed ac felis. Sed commodo, magna quis lacinia ornare, quam ante aliquam nisi, eu
+                            iaculis leo purus venenatis dui. </p>
+                        <ul>
+                            <li>List item</li>
+                            <li>List item</li>
+                            <li>List item</li>
+                            <li>List item</li>
+                            <li>List item</li>
+                            <li>List item</li>
+                            <li>List item</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+            </div>
+            <!-- No auto height ends -->
+
+            <!-- Sortable accordion starts -->
+            <div class="row mt-5">
+                <h2>Sortable Accordions</h2>
+                <div id="accordionE">
+                    <div class="group">
+                        <h3>Section 1</h3>
+                        <div>
+                            <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque.
+                                Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh.
+                                Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum
+                                a velit eu ante scelerisque vulputate.</p>
+                        </div>
+                    </div>
+                    <div class="group">
+                        <h3>Section 2</h3>
+                        <div>
+                            <p>Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet purus. Vivamus
+                                hendrerit, dolor at aliquet laoreet, mauris turpis porttitor velit, faucibus interdum
+                                tellus libero ac justo. Vivamus non quam. In suscipit faucibus urna. </p>
+                        </div>
+                    </div>
+                    <div class="group">
+                        <h3>Section 3</h3>
+                        <div>
+                            <p>Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis. Phasellus
+                                pellentesque purus in massa. Aenean in pede. Phasellus ac libero ac tellus pellentesque
+                                semper. Sed ac felis. Sed commodo, magna quis lacinia ornare, quam ante aliquam nisi, eu
+                                iaculis leo purus venenatis dui. </p>
+                            <ul>
+                                <li>List item one</li>
+                                <li>List item two</li>
+                                <li>List item three</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="group">
+                        <h3>Section 4</h3>
+                        <div>
+                            <p>Cras dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+                                ac turpis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+                                posuere cubilia Curae; Aenean lacinia mauris vel est. </p>
+                            <p>Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus. Class aptent
+                                taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Sortable accordion ends -->
+
+
+
+            <h3 class="text-center text-black text-bg-warning coustomHeading mt-3">Auto complete</h3>
+            <!-- auto complete starts -->
+            <div class="row mt-5">
+                <div class="ui-widget">
+                    <label>Your preferred programming language: </label>
+                    <select id="combobox">
+                        <option value>Select one...</option>
+                        <option value="ActionScript">ActionScript</option>
+                        <option value="AppleScript">AppleScript</option>
+                        <option value="Asp">Asp</option>
+                        <option value="BASIC">BASIC</option>
+                        <option value="C">C</option>
+                        <option value="C++">C++</option>
+                        <option value="Clojure">Clojure</option>
+                        <option value="COBOL">COBOL</option>
+                        <option value="ColdFusion">ColdFusion</option>
+                        <option value="Erlang">Erlang</option>
+                        <option value="Fortran">Fortran</option>
+                        <option value="Groovy">Groovy</option>
+                        <option value="Haskell">Haskell</option>
+                        <option value="Java">Java</option>
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="Lisp">Lisp</option>
+                        <option value="Perl">Perl</option>
+                        <option value="PHP">PHP</option>
+                        <option value="Python">Python</option>
+                        <option value="Ruby">Ruby</option>
+                        <option value="Scala">Scala</option>
+                        <option value="Scheme">Scheme</option>
+                    </select>
+                </div>
+                <button id="toggleC">Show underlying select</button>
+            </div>
+            <!-- auto complete ends -->
+
+            <!-- multiple values starts -->
+            <div class="row mt-5">
+                <h2>Multiple values</h2>
+
+                <div class="ui-widget cMultiple">
+                    <label for="tags">Tag programming languages: </label>
+                    <input id="tags" size="50">
+                </div>
+            </div>
+            <!-- multiple values ends -->
+
+            <!-- xml data parsed starts -->
+            <div class="row mt-5">
+                <h2>XML Data parsed</h2>
+                <div class="ui-widget">
+                    <label for="birds">London matches: </label>
+                    <input id="birds">
+                </div>
+
+                <div class="ui-widget" style="margin-top:2em; font-family:Arial">
+                    Result:
+                    <div id="log" style="height: 200px; width: 300px; overflow: auto;" class="ui-widget-content"></div>
+                </div>
+
+            </div>
+            <!-- xml data parsed ends -->
+
+            <h3 class="text-center text-black text-bg-warning coustomHeading mt-3">CheckBox Radio</h3>
+            <!-- checkbox starts -->
+            <div class="row mt-5">
+                <div class="widget">
+                    <h1>Checkbox and radio button widgets</h1>
+
+                    <h2>Radio Group</h2>
+                    <fieldset>
+                        <legend>Select a Location: </legend>
+                        <label for="radio-1">New York</label>
+                        <input type="radio" name="radio-1" id="radio-1">
+                        <label for="radio-2">Paris</label>
+                        <input type="radio" name="radio-1" id="radio-2">
+                        <label for="radio-3">London</label>
+                        <input type="radio" name="radio-1" id="radio-3">
+                    </fieldset>
+
+                    <h2>Checkbox</h2>
+                    <fieldset>
+                        <legend>Hotel Ratings: </legend>
+                        <label for="checkbox-1">2 Star</label>
+                        <input type="checkbox" name="checkbox-1" id="checkbox-1">
+                        <label for="checkbox-2">3 Star</label>
+                        <input type="checkbox" name="checkbox-2" id="checkbox-2">
+                        <label for="checkbox-3">4 Star</label>
+                        <input type="checkbox" name="checkbox-3" id="checkbox-3">
+                        <label for="checkbox-4">5 Star</label>
+                        <input type="checkbox" name="checkbox-4" id="checkbox-4">
+                    </fieldset>
+
+                    <h2>Checkbox nested in label</h2>
+                    <fieldset>
+                        <legend>Bed Type: </legend>
+                        <label for="checkbox-nested-1">2 Double
+                            <input type="checkbox" name="checkbox-nested-1" id="checkbox-nested-1">
+                        </label>
+                        <label for="checkbox-nested-2">2 Queen
+                            <input type="checkbox" name="checkbox-nested-2" id="checkbox-nested-2">
+                        </label>
+                        <label for="checkbox-nested-3">1 Queen
+                            <input type="checkbox" name="checkbox-nested-3" id="checkbox-nested-3">
+                        </label>
+                        <label for="checkbox-nested-4">1 King
+                            <input type="checkbox" name="checkbox-nested-4" id="checkbox-nested-4">
+                        </label>
+                    </fieldset>
+                </div>
+            </div>
+
+
+            <!-- checkbox ends -->
+
+
+            <!-- product selector starts -->
+            <div class="row mt-5">
+                <h2>Product Selector</h2>
+
+                <div class="controls">
+                    <div class="brand-wrap">
+                        <h3>1.) Select a brand</h3>
+                        <div class="brand">
+                            <label for="brand-jquery">jQuery</label>
+                            <input type="radio" name="brand" id="brand-jquery" data-background-color="#0769AD"
+                                data-color="#7ACEF4" data-background-image="url(images/jquery.png)">
+                            <label for="brand-jquery-ui">jQuery UI</label>
+                            <input type="radio" name="brand" id="brand-jquery-ui" data-background-color="#B24926"
+                                data-color="#FAA523" data-background-image="url(images/jquery-ui.png)" checked>
+                            <label for="brand-jquery-mobile">jQuery Mobile</label>
+                            <input type="radio" name="brand" id="brand-jquery-mobile" data-background-color="#108040"
+                                data-color="#3EB249" data-background-image="url(images/jquery-mobile.png)">
+                            <label for="brand-sizzle">Sizzle</label>
+                            <input type="radio" name="brand" id="brand-sizzle" data-background-color="#9A1B1E"
+                                data-color="#FAA523" data-background-image="url(images/sizzle.png)">
+                            <label for="brand-qunit">QUnit</label>
+                            <input type="radio" name="brand" id="brand-qunit" data-background-color="#390F39"
+                                data-color="#9C3493" data-background-image="url(images/qunit.png)">
+                        </div>
+                    </div>
+                    <div class="shape-wrap">
+                        <h3>2.) Select a shape</h3>
+                        <div class="shape-bar">
+                            <label for="shape-circle">Circle</label>
+                            <input type="radio" name="shape" id="shape-circle" value="circle" checked>
+                            <label for="shape-square">Square</label>
+                            <input type="radio" name="shape" id="shape-square" value="square">
+                            <label for="shape-pill">Pill</label>
+                            <input type="radio" name="shape" id="shape-pill" value="pill">
+                            <label for="shape-rectangle">Rectangle</label>
+                            <input type="radio" name="shape" id="shape-rectangle" value="rectangle">
+                        </div>
+                    </div>
+                    <div class="toggle-wrap">
+                        <h3>3.) Customize</h3>
+                        <div class="toggles">
+                            <label for="color">Shadow</label>
+                            <input class="toggle brand-toggle" type="checkbox" name="color" id="color">
+                            <label for="border">Border</label>
+                            <input class="toggle" type="checkbox" name="border" id="border">
+                            <label for="background-color">Background</label>
+                            <input class="toggle brand-toggle" type="checkbox" name="background-color"
+                                id="background-color" checked>
+                            <label for="background-image">Background Image</label>
+                            <input class="toggle brand-toggle" type="checkbox" name="background-image"
+                                id="background-image" checked>
+                        </div>
+                    </div>
+                    <div class="shape circle background jquery-ui"></div>
+                </div>
+
+            </div>
+            <!-- product selector ends -->
+
+            <h3 class="text-center text-black text-bg-warning coustomHeading mt-3">CheckBox Radio</h3>
+            <!-- control group starts -->
+            <div class="row mt-5">
+                <div class="widget">
+                    <h1>Controlgroup</h1>
+                    <fieldset>
+                        <legend>Rental Car</legend>
+                        <div class="controlgroup">
+                            <select id="car-type">
+                                <option>Compact car</option>
+                                <option>Midsize car</option>
+                                <option>Full size car</option>
+                                <option>SUV</option>
+                                <option>Luxury</option>
+                                <option>Truck</option>
+                                <option>Van</option>
+                            </select>
+                            <label for="transmission-standard">Standard</label>
+                            <input type="radio" name="transmission" id="transmission-standard">
+                            <label for="transmission-automatic">Automatic</label>
+                            <input type="radio" name="transmission" id="transmission-automatic">
+                            <label for="insurance">Insurance</label>
+                            <input type="checkbox" name="insurance" id="insurance">
+                            <label for="horizontal-spinner" class="ui-controlgroup-label"># of cars</label>
+                            <input id="horizontal-spinner" class="ui-spinner-input">
+                            <button>Book Now!</button>
+                        </div>
+                    </fieldset>
+                    <br>
+                    <fieldset>
+                        <legend>Rental Car</legend>
+                        <div class="controlgroup-vertical">
+                            <select>
+                                <option>Compact car</option>
+                                <option>Midsize car</option>
+                                <option>Full size car</option>
+                                <option>SUV</option>
+                                <option>Luxury</option>
+                                <option>Truck</option>
+                                <option>Van</option>
+                            </select>
+                            <label for="transmission-standard-v">Standard</label>
+                            <input type="radio" name="transmission-v" id="transmission-standard-v">
+                            <label for="transmission-automatic-v">Automatic</label>
+                            <input type="radio" name="transmission-v" id="transmission-automatic-v">
+                            <label for="insurance-v">Insurance</label>
+                            <input type="checkbox" name="insurance" id="insurance-v">
+                            <label for="vertical-spinner" class="ui-controlgroup-label"># of cars</label>
+                            <input id="vertical-spinner" class="ui-spinner-input">
+                            <button id="book">Book Now!</button>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+            <!-- control group ends -->
+
+
+            <!-- date picker starts -->
+            <h3 class="text-center text-black text-bg-warning coustomHeading mt-3">Date picker</h3>
+            <div class="row mt-5">
+                <p>Date: <input type="text" id="datepicker" size="30"></p>
+
+                <p>Animations:<br>
+                    <select id="anim">
+                        <option value="show">Show (default)</option>
+                        <option value="slideDown">Slide down</option>
+                        <option value="fadeIn">Fade in</option>
+                        <option value="blind">Blind (UI Effect)</option>
+                        <option value="bounce">Bounce (UI Effect)</option>
+                        <option value="clip">Clip (UI Effect)</option>
+                        <option value="drop">Drop (UI Effect)</option>
+                        <option value="fold">Fold (UI Effect)</option>
+                        <option value="slide">Slide (UI Effect)</option>
+                        <option value>None</option>
+                    </select>
+                </p>
+
+            </div>
+            <!-- date picker ends -->
+
+            <h3 class="text-center text-black text-bg-warning coustomHeading mt-3">Dialog</h3>
+            <!-- dialog starts -->
+            <div class="row mt-5">
+                <div id="dialog" title="Basic dialog">
+                    <p>This is an animated dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the &apos;x&apos; icon.</p>
+                  </div>
+                   
+                  <button id="opener">Open Dialog</button>
+            </div>
+            <!-- dialog ends -->
+
+            <!-- menu starts -->
+            <h3 class="text-center text-black text-bg-warning coustomHeading mt-3">Menu</h3>
+            <div class="row mt-5">
+                <ul id="menuA">
+                    <li class="ui-state-disabled"><div>Toys (n/a)</div></li>
+                    <li><div>Books</div></li>
+                    <li><div>Clothing</div></li>
+                    <li><div>Electronics</div>
+                      <ul>
+                        <li class="ui-state-disabled"><div>Home Entertainment</div></li>
+                        <li><div>Car Hifi</div></li>
+                        <li><div>Utilities</div></li>
+                      </ul>
+                    </li>
+                    <li><div>Movies</div></li>
+                    <li><div>Music</div>
+                      <ul>
+                        <li><div>Rock</div>
+                          <ul>
+                            <li><div>Alternative</div></li>
+                            <li><div>Classic</div></li>
+                          </ul>
+                        </li>
+                        <li><div>Jazz</div>
+                          <ul>
+                            <li><div>Freejazz</div></li>
+                            <li><div>Big Band</div></li>
+                            <li><div>Modern</div></li>
+                          </ul>
+                        </li>
+                        <li><div>Pop</div></li>
+                      </ul>
+                    </li>
+                    <li class="ui-state-disabled"><div>Specials (n/a)</div></li>
+                  </ul>
+                   
+
+            </div>
+            <!-- menu ends -->
+
+        </div>
+        <!-- widget ends -->
+
+
+
+
+    </section>
+
+
+    <!-- js link will add here -->
+    <!-- bootstrapbundle min js will link every time -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jqueryui/jquery-ui.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,828 @@
+.jqueryUi,
+.jqueryUi2 {
+  padding-bottom: 100px;
+}
+
+.cContainer {
+  margin-bottom: 30px;
+  padding-bottom: 150px;
+  border-bottom: 3px solid crimson;
+}
+.coustomHeading {
+  width: 450px;
+  margin: 0 auto;
+}
+.header {
+  padding: 30px;
+  background-color: #ff9602;
+  text-align: center;
+}
+.headerText {
+  color: white;
+}
+
+/* dragable content starts */
+#draggable {
+  width: 150px;
+  height: 150px;
+  padding: 0.5em;
+  color: cyan;
+  background-color: tomato;
+  justify-content: center;
+}
+/* dragable content ends */
+
+/* draggable constrain movement starts */
+.draggableC {
+  margin: 0 10px 10px 0;
+  padding: 0.5em;
+  width: 110px;
+  height: 110px;
+  float: left;
+  background-color: tomato;
+  color: aqua;
+}
+#draggable1,
+#draggable2 {
+  margin-bottom: 20px;
+}
+#draggable1 {
+  cursor: n-resize;
+}
+#draggable2 {
+  cursor: e-resize;
+}
+#containment-wrapper {
+  width: 95%;
+  height: 150px;
+  border: 2px solid #ccc;
+  padding: 10px;
+}
+.constrainHeading {
+  clear: left;
+}
+
+/* draggable constrain movement ends */
+
+/* cursor style starts */
+#draggable5,
+#draggable6,
+#draggable7 {
+  margin: 50px 10px 10px 0;
+  padding: 0.5em;
+  width: 150px;
+  height: 150px;
+  float: left;
+  background-color: tomato;
+  color: black;
+}
+
+/* cursor style ends */
+.marginTop {
+  margin-top: 100px;
+}
+.marginBottom {
+  margin-bottom: 60px;
+}
+/* events starts */
+#draggable8 {
+  width: 16em;
+  padding: 0 1em;
+}
+#draggable8 ul li {
+  margin: 1em 0;
+  padding: 0.5em 0;
+}
+* html #draggable8 ul li {
+  height: 1%;
+}
+#draggable8 ul li span.ui-icon {
+  float: left;
+}
+#draggable8 ul li span.count {
+  font-weight: bold;
+}
+/* events ends */
+
+/* handles starts */
+#draggable9,
+#draggable10 {
+  margin: 20px 10px 10px 0;
+  padding: 0.5em;
+  width: 100px;
+  height: 100px;
+  background-color: cadetblue;
+  float: left;
+}
+#draggable9 p {
+  cursor: move;
+}
+/* handles ends */
+
+/* draggable + sortable starts */
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+}
+li {
+  margin: 5px;
+  padding: 5px;
+  width: 150px;
+}
+/* draggable + sortable ends */
+
+/* revert position starts */
+#draggable12,
+#draggable13 {
+  margin: 0 10px 10px 0;
+  padding: 0.5em;
+  width: 100px;
+  height: 100px;
+  background-color: tomato;
+  color: aqua;
+  float: left;
+}
+/* revert position ends */
+
+/* visual feedback starts */
+#draggable14,
+#draggable15,
+#draggable16,
+#set div {
+  width: 90px;
+  height: 90px;
+  padding: 0.5em;
+  float: left;
+  margin: 0 10px 10px 0;
+  background-color: tomato;
+  color: aqua;
+}
+#draggable14,
+#draggable15,
+#draggable16 {
+  margin-bottom: 20px;
+  background-color: tomato;
+  color: aqua;
+}
+#set {
+  clear: both;
+  float: left;
+  width: 368px;
+  height: 120px;
+}
+.para {
+  clear: both;
+  margin: 0;
+  padding: 1em 0;
+}
+/* visual feedback ends */
+
+/* droppable default starts */
+#draggableA {
+  margin: 10px 10px 10px 0;
+  width: 100px;
+  height: 100px;
+  padding: 0.5em;
+  float: left;
+  background-color: black;
+  color: azure;
+}
+#droppableA {
+  width: 150px;
+  height: 150px;
+  padding: 0.5em;
+  float: left;
+  margin: 10px;
+}
+.drag {
+  cursor: pointer;
+}
+/* droppable default ends */
+
+/* Droppable accept starts */
+#droppableB {
+  width: 150px;
+  height: 150px;
+  padding: 0.5em;
+  float: left;
+  margin: 30px;
+}
+#draggableB,
+#draggable-nonvalid {
+  width: 100px;
+  height: 100px;
+  padding: 0.5em;
+  float: left;
+  margin: 30px 10px 10px 0;
+}
+/* Droppable accept ends */
+
+/* Droppable prvent propagation starts */
+#draggableC {
+  width: 100px;
+  height: 40px;
+  padding: 0.5em;
+  float: left;
+  margin: 20px 10px 10px 0;
+  background-color: cadetblue;
+  color: red;
+}
+#droppableC,
+#droppableC2 {
+  width: 230px;
+  height: 120px;
+  padding: 0.5em;
+  float: left;
+  margin: 20px;
+}
+#droppable-inner,
+#droppable2-inner {
+  width: 170px;
+  height: 60px;
+  padding: 0.5em;
+  float: left;
+  margin: 10px;
+}
+/* Droppable prvent propagation ends */
+
+/* revert draggable position starts */
+#draggableD,
+#draggableD2 {
+  margin: 30px 10px 10px 0;
+  width: 100px;
+  height: 100px;
+  padding: 0.5em;
+  float: left;
+  background-color: turquoise;
+  color: tomato;
+}
+#droppableD {
+  width: 150px;
+  height: 150px;
+  padding: 0.5em;
+  float: left;
+  margin: 30px;
+}
+/* revert draggable position ends */
+
+/* simple photo gallery starts */
+#gallery {
+  float: left;
+  width: 65%;
+  min-height: 12em;
+}
+.gallery.custom-state-active {
+  background: #eee;
+}
+.gallery li {
+  float: left;
+  width: 96px;
+  padding: 0.4em;
+  margin: 2em 0.4em 0.4em 0;
+  text-align: center;
+}
+.gallery li h5 {
+  margin: 0 0 0.4em;
+  cursor: move;
+}
+.gallery li a {
+  float: right;
+}
+.gallery li a.ui-icon-zoomin {
+  float: left;
+}
+.gallery li img {
+  width: 100%;
+  cursor: move;
+}
+
+#trash {
+  float: right;
+  width: 32%;
+  min-height: 18em;
+  padding: 1%;
+}
+#trash h4 {
+  line-height: 16px;
+  margin: 2em 0 0.4em;
+}
+#trash h4 .ui-icon {
+  float: left;
+}
+#trash .gallery h5 {
+  display: none;
+}
+
+/* simple photo gallery ends */
+
+/* visual feedback starts */
+#draggableE,
+#draggableE2 {
+  width: 90px;
+  height: 90px;
+  padding: 0.5em;
+  float: left;
+  margin: 30px 10px 10px 0;
+}
+#droppableE,
+#droppableE2 {
+  width: 120px;
+  height: 120px;
+  padding: 0.5em;
+  float: left;
+  margin: 30px;
+}
+.feedback {
+  clear: left;
+}
+/* visual feedback ends */
+
+/* resizable defaults starts */
+#resizable {
+  margin-top: 30px;
+  padding: 0.5em;
+  width: 150px;
+  height: 150px;
+  background-color: burlywood;
+}
+#resizable h3 {
+  text-align: center;
+  margin: 0;
+}
+/* resizable defaults ends */
+
+/* resizable animates starts */
+#resizableA {
+  width: 150px;
+  height: 150px;
+  padding: 0.5em;
+  background-color: #ff9602;
+}
+#resizableA h3 {
+  text-align: center;
+  margin: 0;
+}
+.ui-resizable-helper {
+  border: 1px dotted gray;
+}
+/* resizable animates ends */
+
+/* constrain resize area starts  */
+#container {
+  width: 300px;
+  height: 300px;
+}
+#container h3 {
+  text-align: center;
+  margin: 0;
+  margin-bottom: 10px;
+}
+#resizableB {
+  background-position: top left;
+  width: 150px;
+  height: 150px;
+}
+#resizableB,
+#container {
+  padding: 0.5em;
+}
+
+/* constrain resize area ends */
+
+/* Resize helper starts */
+#resizableC {
+  width: 150px;
+  height: 150px;
+  padding: 0.5em;
+  background-color: orange;
+}
+#resizableC h3 {
+  text-align: center;
+  margin: 0;
+}
+.ui-resizable-helper {
+  border: 2px dotted #00f;
+}
+/* Resize helper ends */
+
+/* maximum or minimum size starts */
+#resizableD {
+  width: 200px;
+  height: 150px;
+  padding: 5px;
+  background-color: teal;
+  outline: 2px solid #ff9602;
+}
+#resizableD h3 {
+  text-align: center;
+  margin: 0;
+}
+/* maximum or minimum size ends */
+
+/* preserve aspect ratio starts */
+#resizableE {
+  width: 160px;
+  height: 90px;
+  padding: 0.5em;
+  background-color: thistle;
+}
+#resizableE h3 {
+  text-align: center;
+  margin: 0;
+}
+/* preserve aspect ratio ends */
+
+/* snap to grid starts */
+#resizableF {
+  width: 150px;
+  height: 150px;
+  padding: 0.5em;
+}
+#resizableF h3 {
+  text-align: center;
+  margin: 0;
+}
+/* snap to grid ends */
+
+/* synchronous resize starts */
+#resizableG {
+  background-position: top left;
+  background-color: yellow;
+}
+#resizableG,
+#also {
+  width: 150px;
+  height: 120px;
+  padding: 0.5em;
+}
+#resizableG h3,
+#also h3 {
+  text-align: center;
+  margin: 0;
+}
+#also {
+  margin-top: 1em;
+  background-color: yellowgreen;
+}
+/* synchronous resize ends */
+
+/* visual feedback starts */
+#resizableH {
+  width: 150px;
+  height: 150px;
+  padding: 0.5em;
+  background-color: brown;
+}
+#resizableH h3 {
+  text-align: center;
+  margin: 0;
+}
+.ui-resizable-ghost {
+  border: 1px dotted gray;
+}
+/* visual feedback ends */
+
+/* select default starts */
+#feedback {
+  font-size: 1.4em;
+}
+#selectable .ui-selecting {
+  background: #feca40;
+}
+#selectable .ui-selected {
+  background: #f39814;
+  color: white;
+}
+#selectable {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 60%;
+}
+#selectable li {
+  margin: 3px;
+  padding: 0.4em;
+  font-size: 1.4em;
+  height: 18px;
+}
+/* select default ends */
+
+/* select display as grid starts */
+#feedback {
+  font-size: 1.4em;
+}
+#selectableA .ui-selecting {
+  background: #feca40;
+}
+#selectableA .ui-selected {
+  background: #f39814;
+  color: white;
+}
+#selectableA {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 450px;
+}
+#selectableA li {
+  margin: 3px;
+  padding: 1px;
+  float: left;
+  width: 100px;
+  height: 80px;
+  font-size: 4em;
+  text-align: center;
+}
+/* select display as grid ends */
+
+/* serialize select starts */
+#feedbackB {
+  font-size: 1.4em;
+}
+#selectableB .ui-selecting {
+  background: #feca40;
+}
+#selectableB .ui-selected {
+  background: #f39814;
+  color: white;
+}
+#selectableB {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 60%;
+}
+#selectableB li {
+  margin: 3px;
+  padding: 0.4em;
+  font-size: 1.4em;
+  height: 18px;
+  cursor: pointer;
+}
+/* serialize select ends */
+
+/* sortable default starts */
+#sortableA {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 60%;
+}
+#sortableA li {
+  margin: 0 3px 3px 3px;
+  padding: 0.4em;
+  padding-left: 1.5em;
+  font-size: 1.4em;
+  height: 18px;
+}
+#sortableA li span {
+  position: absolute;
+  margin-left: -1.3em;
+}
+/* sortable default ends */
+
+/* connect list starts */
+#sortable1,
+#sortable2 {
+  border: 1px solid #eee;
+  width: 142px;
+  min-height: 20px;
+  list-style-type: none;
+  margin: 0;
+  padding: 5px 0 0 0;
+  float: left;
+  margin-right: 10px;
+}
+#sortable1 li,
+#sortable2 li {
+  margin: 0 5px 5px 5px;
+  padding: 5px;
+  font-size: 1.2em;
+  width: 120px;
+}
+/* connect list ends */
+
+/* Display as grid starts */
+#sortableB {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 450px;
+}
+#sortableB li {
+  margin: 3px 3px 3px 0;
+  padding: 1px;
+  float: left;
+  width: 100px;
+  height: 90px;
+  font-size: 4em;
+  text-align: center;
+}
+/* Display as grid ends */
+
+/* Drop placeholder starts */
+
+#sortableC {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 60%;
+}
+#sortableC li {
+  margin: 0 5px 5px 5px;
+  padding: 5px;
+  font-size: 1.2em;
+  height: 1.5em;
+}
+html > body #sortableC li {
+  height: 1.5em;
+  line-height: 1.2em;
+}
+.ui-state-highlight {
+  height: 1.5em;
+  line-height: 1.2em;
+}
+/* Drop placeholder ends */
+
+/* Handle emptpy list starts */
+#sortableD1,
+#sortableD2,
+#sortableD3 {
+  list-style-type: none;
+  margin: 0;
+  float: left;
+  margin-right: 10px;
+  background: #eee;
+  padding: 5px;
+  width: 143px;
+}
+#sortableD1 li,
+#sortableD2 li,
+#sortableD3 li {
+  margin: 5px;
+  padding: 5px;
+  font-size: 1.2em;
+  width: 120px;
+}
+/* Handle emptpy list ends */
+
+/* include or exclude items starts */
+#sortableE1,
+#sortableE2 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  zoom: 1;
+
+}
+#sortableE1 li,
+#sortableE2 li {
+  margin: 0 5px 5px 5px;
+  padding: 3px;
+  width: 90%;
+  background-color: black;
+  color: white;
+}
+/* include or exclude items ends */
+
+/* portlets starts */
+.bodyP {
+    min-width: 520px;
+  }
+  .column {
+    width: 170px;
+    float: left;
+    padding-bottom: 100px;
+  }
+  .portlet {
+    margin: 0 1em 1em 0;
+    padding: 0.3em;
+    background-color: #ff9602;
+    color: black;
+    cursor: pointer;
+  }
+  .portlet-header {
+    padding: 0.2em 0.3em;
+    margin-bottom: 0.5em;
+    position: relative;
+  }
+  .portlet-toggle {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -8px;
+  }
+  .portlet-content {
+    padding: 0.4em;
+  }
+  .portlet-placeholder {
+    border: 1px dotted black;
+    margin: 0 1em 1em 0;
+    height: 50px;
+  }
+/* portlets ends */
+
+
+/* Accordion fill space starts */
+#accordion-resizer {
+    padding: 10px;
+    width: 350px;
+    height: 220px;
+    background-color: black;
+    color: white;
+  }
+/* Accordion fill space ends */
+
+
+/* Auto complete combo box starts */
+.custom-combobox {
+    position: relative;
+    display: inline-block;
+  }
+  .custom-combobox-toggle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin-left: -1px;
+    padding: 0;
+  }
+  .custom-combobox-input {
+    margin: 0;
+    padding: 5px 10px;
+  }
+/* Auto complete combo box ends */
+
+
+/* multiple auto select */
+.cMultiple{
+    background-color: #ff9602;
+    color: black;
+}
+/* multiple auto select  ends*/
+
+/* xml dara parsed starts */
+.ui-autocomplete-loading {
+    background: white url("images/ui-anim_basic_16x16.gif") right center no-repeat;
+  }
+/* xml dara parsed ends */
+
+/* product selector starts */
+.shape {
+    margin-left: 4em;
+    margin-top: 2.5em;
+    height: 8em;
+    width: 8em;
+    box-shadow: 4px 4px 8px;
+    color: #ccc;
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-position: 50%;
+  }
+  .circle, .pill {
+    border-radius: 8em;
+  }
+  .pill, .rectangle {
+    width: 16em;
+  }
+  .square, .circle {
+    margin-left: 9em;
+  }
+  .border {
+    border: 2px solid #333333;
+  }
+  .toggles {
+    width: 200px;
+  }
+  .toggle-wrap, .shape {
+    display: inline-block;
+    vertical-align: top;
+  }
+  .controls {
+    background: #ccc;
+    padding: 1em;
+    display: inline-block;
+  }
+/*product selector  ends */
+
+/* control group starts */
+.ui-controlgroup-vertical {
+    width: 150px;
+  }
+  .ui-controlgroup.ui-controlgroup-vertical > button.ui-button,
+  .ui-controlgroup.ui-controlgroup-vertical > .ui-controlgroup-label {
+    text-align: center;
+  }
+  #car-type-button {
+    width: 120px;
+  }
+  .ui-controlgroup-horizontal .ui-spinner-input {
+    width: 20px;
+  }
+/* control group ends */
+
+/* menu starts */
+.ui-menu { width: 150px; }
+/* menu ends */
